@@ -3,7 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="helloBean" class="com.tutorial.spring.HelloWorld">
-        <property name="name" value="Spring" />
+    <bean id="message" class="com.tutorial.spring.Message"
+          init-method="init" destroy-method="destroy">
+        <property name="message" value="This is simple message."/>
     </bean>
+
+    <bean class="com.tutorial.spring.BeanPostProcessorImpl"/>
+
 </beans>
